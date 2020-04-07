@@ -1,0 +1,42 @@
+using System;
+using System.Linq;
+
+namespace Max_Sequence_of_Equal_Elements
+{
+    class Program
+    {
+        static void Main()
+        {
+            int[] arr = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            int counter = 1;
+            int element = 0;
+            int maxCount = 1;
+
+            for (int i = 1; i < arr.Length; i++)
+            {
+                int digit = arr[i];
+                int previousDigit = arr[i - 1];
+
+                if (previousDigit==digit)
+                {
+                    counter++;
+
+                    if (counter > maxCount)
+                    {
+                        maxCount = counter;
+                        element = arr[i];
+                    } 
+                }
+                else
+                {
+                    counter = 1;
+                }
+            }
+
+            for (int i = 0; i < maxCount; i++)
+            {
+                Console.Write(element + " ");
+            }
+        }
+    }
+}
