@@ -1,0 +1,146 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace List_Manipulation_Advanced
+{
+    class Program
+    {
+        static void Main()
+        {
+            List<int> numbers = Console.ReadLine().Split().Select(int.Parse).ToList();
+            string command = Console.ReadLine();
+            int counter = 0;
+
+            while (command != "end")
+            {
+                string[] token = command.Split();
+
+                if (token[0] == "Contains")
+                {
+                    if (numbers.Contains(int.Parse(token[1])))
+                    {
+                        Console.WriteLine("Yes");
+                    }
+                    else
+                    {
+                        Console.WriteLine("No such number");
+                    }                   
+                }
+                else if(token[0] == "PrintEven")
+                {
+                    for (int i = 0; i < numbers.Count; i++)
+                    {
+                        if (numbers[i] % 2 == 0)
+                        {
+                            Console.Write(string.Join(" ", numbers[i] + " "));
+                        }
+                    }
+
+                    Console.WriteLine();
+                }
+                else if (token[0] == "PrintOdd")
+                {
+                    for (int i = 0; i < numbers.Count; i++)
+                    {
+                        if (numbers[i] % 2 != 0)
+                        {
+                            Console.Write(string.Join(" ", numbers[i]) + " ");
+                        }
+                    }
+
+                    Console.WriteLine();
+                }
+                else if (token[0] == "GetSum")
+                {
+                    Console.WriteLine(string.Join(" ", numbers.Sum()));
+                }
+                else if (token[0] == "Filter")
+                {
+                    int number = int.Parse(token[2]);
+
+                    if (token[1] == ">")
+                    {
+                        for (int i = 0; i < numbers.Count; i++)
+                        {
+                            if (number < numbers[i])
+                            {
+                                Console.Write(string.Join(" ", numbers[i] + " "));
+                            }
+                        }
+
+                        Console.WriteLine();
+                    }
+                    else if (token[1] == ">=")
+                    {
+                        for (int i = 0; i < numbers.Count; i++)
+                        {
+                            if(number <= numbers[i])
+                            {
+                                Console.Write(string.Join(" ", numbers[i] + " "));
+                            }
+                        }
+
+                        Console.WriteLine();
+                    }
+                    else if (token[1] == "<")
+                    {
+                        for (int i = 0; i < numbers.Count; i++)
+                        {
+                            if (number > numbers[i])
+                            {
+                                Console.Write(string.Join(" ", numbers[i] + " "));
+                            }
+                        }
+
+                        Console.WriteLine();
+                    }
+                    else if (token[1] == "<=")
+                    {
+                        for (int i = 0; i < numbers.Count; i++)
+                        {
+                            if (number >= numbers[i])
+                            {
+                                Console.Write(string.Join(" ", numbers[i] + " "));
+                            }
+                        }
+
+                        Console.WriteLine();
+                    }
+                }
+                else if (token[0] == "Add")
+                {
+                    int secondNumber = int.Parse(token[1]);
+                    numbers.Add(secondNumber);
+                    counter++;
+                }
+                else if (token[0] == "Remove")
+                {
+                    int secondNumber = int.Parse(token[1]);
+                    numbers.Remove(secondNumber);
+                    counter++;
+                }
+                else if (token[0] == "RemoveAt")
+                {
+                    int index = int.Parse(token[1]);
+                    numbers.RemoveAt(index);
+                    counter++;
+                }
+                else if (token[0] == "Insert")
+                {
+                    int secondNumber = int.Parse(token[1]);
+                    int index = int.Parse(token[2]);
+                    numbers.Insert(index, secondNumber);
+                    counter++;
+                }
+
+                command = Console.ReadLine();
+            }
+
+            if (counter > 0)
+            {
+                Console.WriteLine(string.Join(" ", numbers));
+            }
+        }
+    }
+}
