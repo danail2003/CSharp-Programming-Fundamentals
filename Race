@@ -1,0 +1,68 @@
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+namespace Race
+{
+    class Program
+    {
+        static void Main()
+        {
+            string[] participants = Console.ReadLine().Split(", ");
+            string command = Console.ReadLine();
+            Dictionary<string, int> racers = new Dictionary<string, int>();
+            string name = "";
+            int distance = 0;
+            int counter = 0;
+
+            for (int i = 0; i < participants.Length; i++)
+            {
+                racers[participants[i]] = 0;
+            }
+
+            while(command != "end of race")
+            {
+                for (int i = 0; i < command.Length; i++)
+                {
+                    if (char.IsLetter(command[i]))
+                    {
+                        name += command[i];
+                    }
+                    else if (char.IsDigit(command[i]))
+                    {
+                        distance += int.Parse(command[i].ToString());
+                    }
+                }
+
+                if (racers.ContainsKey(name))
+                {
+                    racers[name] += distance;                   
+                }
+
+                name = string.Empty;
+                distance = 0;
+                command = Console.ReadLine();
+            }
+
+            var order = racers.OrderByDescending(x => x.Value);
+
+            foreach (var racer in order)
+            {
+                if (counter == 0)
+                {
+                    Console.WriteLine($"1st place: {racer.Key}");
+                }
+                else if (counter == 1)
+                {
+                    Console.WriteLine($"2nd place: {racer.Key}");
+                }
+                else if (counter == 2)
+                {
+                    Console.WriteLine($"3rd place: {racer.Key}");
+                }
+
+                counter++;
+            }
+        }
+    }
+}
