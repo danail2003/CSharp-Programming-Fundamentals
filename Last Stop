@@ -1,0 +1,87 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Last_Stop
+{
+    class Program
+    {
+        static void Main()
+        {
+            List<int> numbers = Console.ReadLine().Split().Select(int.Parse).ToList();
+            string command = Console.ReadLine();
+
+            while (command != "END")
+            {
+                string[] token = command.Split();
+
+                if (token[0] == "Change")
+                {
+                    int firstNumber = int.Parse(token[1]);
+                    int secondNumber = int.Parse(token[2]);
+
+                    if (numbers.Contains(firstNumber))
+                    {
+                        for (int i = 0; i < numbers.Count; i++)
+                        {
+                            if (firstNumber == numbers[i])
+                            {
+                                numbers[i] = secondNumber;
+                            }
+                        }
+                    }
+                }
+                else if (token[0] == "Hide")
+                {
+                    int number = int.Parse(token[1]);
+
+                    if (numbers.Contains(number))
+                    {
+                        numbers.Remove(number);
+                    }
+                }
+                else if (token[0] == "Switch")
+                {
+                    int firstNumber = int.Parse(token[1]);
+                    int secondNumber = int.Parse(token[2]);
+
+                    if(numbers.Contains(firstNumber) && numbers.Contains(secondNumber))
+                    {
+                        for (int i = 0; i < numbers.Count; i++)
+                        {
+                            if (numbers[i] == firstNumber)
+                            {
+                                numbers[i] = secondNumber;
+                            }
+                            else if (numbers[i] == secondNumber)
+                            {
+                                numbers[i] = firstNumber;
+                            }
+                        }
+                    }
+                }
+                else if (token[0] == "Insert")
+                {
+                    int index = int.Parse(token[1]);
+                    int number = int.Parse(token[2]);
+
+                    for (int i = 0; i < numbers.Count; i++)
+                    {
+                        if (i == index && index >= 0 && numbers.Count > index + 1)
+                        {
+                            numbers.Insert(i + 1, number);
+                        }
+                    }
+                }
+                else if (token[0] == "Reverse")
+                {
+                    numbers.Reverse();
+                }
+
+                command = Console.ReadLine();
+            }
+
+            Console.WriteLine(string.Join(" ", numbers));
+        }
+    }
+}
