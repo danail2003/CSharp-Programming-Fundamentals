@@ -1,0 +1,77 @@
+using System;
+using System.Text;
+using System.Linq;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
+
+namespace Star_Enigma
+{
+    class Program
+    {
+        static void Main()
+        {
+            int count = int.Parse(Console.ReadLine());
+            int counter = 0;
+            StringBuilder enigma = new StringBuilder();
+            List<string> attacked = new List<string>();
+            List<string> destroyed = new List<string>();
+
+            for (int i = 0; i < count; i++)
+            {
+                string input = Console.ReadLine();
+
+                for (int j = 0; j < input.Length; j++)
+                {
+                    if(input[j] == 's' || input[j] == 't' || input[j] == 'a' || input[j] == 'r' || input[j] == 'S' || input[j] == 'A' || input[j] == 'T' || input[j] == 'R')
+                    {
+                        counter++;
+                    }
+                }
+
+                for (int j = 0; j < input.Length; j++)
+                {
+                    int symbol = input[j] - counter;
+                    char element = (char)symbol;
+                    enigma.Append(element);
+                }
+
+                counter = 0;
+
+                Regex regex = new Regex(@"@(?<name>[a-zA-Z]+)[^@\-!:>]*:[0-9]+[^@\-!:>]*!(?<group>[AD])![^@\-!:>]*->[0-9]+");
+
+                Match match = regex.Match(enigma.ToString());
+
+                if (match.Success)
+                {
+                    string name = match.Groups["name"].Value;
+                    string group = match.Groups["group"].Value;
+
+                    if (group == "A")
+                    {
+                        attacked.Add(name);
+                    }
+                    else if(group == "D")
+                    {
+                        destroyed.Add(name);
+                    }
+                }
+
+                enigma.Clear();
+            }
+
+            Console.WriteLine($"Attacked planets: {attacked.Count}");
+
+            foreach (var planet in attacked.OrderBy(x=>x))
+            {
+                Console.WriteLine($"-> {planet}");
+            }
+
+            Console.WriteLine($"Destroyed planets: {destroyed.Count}");
+
+            foreach (var planet in destroyed.OrderBy(x=>x))
+            {
+                Console.WriteLine($"-> {planet}");
+            }
+        }
+    }
+}
