@@ -27,7 +27,7 @@ namespace Activation_Keys
                                 int number = 9 - int.Parse(word[j].ToString());
                                 token += "-" + number;
                             }
-                            else if(char.IsLetter(word[j]))
+                            else if (char.IsLetter(word[j]))
                             {
                                 token += "-" + word[j];
                             }
@@ -44,7 +44,7 @@ namespace Activation_Keys
                                 int number = 9 - int.Parse(word[j].ToString());
                                 token += number;
                             }
-                            else if(char.IsLetter(word[j]))
+                            else if (char.IsLetter(word[j]))
                             {
                                 token += word[j];
                             }
@@ -74,14 +74,14 @@ namespace Activation_Keys
 
                     for (int j = 0; j < word.Length; j++)
                     {
-                        if(j % 5 == 0 && j != 0)
+                        if (j % 5 == 0 && j != 0)
                         {
                             if (char.IsDigit(word[j]))
                             {
                                 int number = 9 - int.Parse(word[j].ToString());
                                 token += "-" + number;
                             }
-                            else if(char.IsLetter(word[j]))
+                            else if (char.IsLetter(word[j]))
                             {
                                 token += "-" + word[j];
                             }
@@ -98,7 +98,7 @@ namespace Activation_Keys
                                 int number = 9 - int.Parse(word[j].ToString());
                                 token += number;
                             }
-                            else if(char.IsLetter(word[j]))
+                            else if (char.IsLetter(word[j]))
                             {
                                 token += word[j];
                             }
