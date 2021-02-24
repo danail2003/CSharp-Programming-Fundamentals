@@ -9,6 +9,7 @@ namespace Animal_Sanctuary
         {
             int count = int.Parse(Console.ReadLine());
             Regex regex = new Regex(@"n:(?<animal>[^;]+);t:(?<kind>[^;]+);c--(?<country>[A-Za-z\s]+)$");
+            
             int sum = 0;
             string endName = "";
             string endKind = "";
