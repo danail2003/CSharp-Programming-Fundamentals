@@ -29,7 +29,7 @@ namespace Battle_Manager
                 }
                 else if (token[0] == "Attack")
                 {
-                    if(users.ContainsKey(token[1]) && users.ContainsKey(token[2]))
+                    if (users.ContainsKey(token[1]) && users.ContainsKey(token[2]))
                     {
                         users[token[2]][0] -= int.Parse(token[3]);
 
