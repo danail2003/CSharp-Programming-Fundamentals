@@ -7,6 +7,7 @@ namespace Bread_Factory
         static void Main()
         {
             string[] workingDay = Console.ReadLine().Split("|");
+            
             int health = 100;
             int coins = 100;
 
