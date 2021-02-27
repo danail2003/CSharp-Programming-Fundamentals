@@ -10,6 +10,7 @@ namespace Center_Point
             double y1 = double.Parse(Console.ReadLine());
             double x2 = double.Parse(Console.ReadLine());
             double y2 = double.Parse(Console.ReadLine());
+            
             PrintingClosedPoints(x1, y1, x2, y2);
         }
 
