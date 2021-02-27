@@ -14,15 +14,15 @@ namespace Calculations
             {
                 AddOperation(firstNumber, secondNumber);
             }
-            else if(command == "multiply")
+            else if (command == "multiply")
             {
                 MultiplyOperation(firstNumber, secondNumber);
             }
-            else if(command == "subtract")
+            else if (command == "subtract")
             {
                 SubtractOperation(firstNumber, secondNumber);
             }
-            else if(command == "divide")
+            else if (command == "divide")
             {
                 DivideOperation(firstNumber, secondNumber);
             }
