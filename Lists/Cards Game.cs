@@ -32,7 +32,7 @@ namespace Cards_Game
                     Console.WriteLine($"Second player wins! Sum: {secondPlayer.Sum()}");
                     break;
                 }
-                else if(secondPlayer.Count == 0)
+                else if (secondPlayer.Count == 0)
                 {
                     Console.WriteLine($"First player wins! Sum: {firstPlayer.Sum()}");
                     break;
