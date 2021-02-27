@@ -8,6 +8,7 @@ namespace Character_Multiplier
         static void Main()
         {
             string[] symbols = Console.ReadLine().Split().ToArray();
+            
             double sum = 0;
             string firstString = symbols[0];
             string secondString = symbols[1];
