@@ -13,7 +13,7 @@ namespace Condense_Array_to_Number
             {
                 int[] condensed = new int[arr.Length - 1];
 
-                for (int i = 0; i < arr.Length-1; i++)
+                for (int i = 0; i < arr.Length - 1; i++)
                 {
                     condensed[i] = arr[i] + arr[i + 1];                    
                 }
