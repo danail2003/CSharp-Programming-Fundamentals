@@ -32,7 +32,7 @@ namespace Characters_in_Range
         {
             for (char i = secondSymbol; i < firstSymbol; i++)
             {
-                if(i != secondSymbol)
+                if (i != secondSymbol)
                 {
                     Console.Write(i + " ");
                 }
