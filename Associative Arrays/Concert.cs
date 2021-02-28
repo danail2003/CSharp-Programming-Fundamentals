@@ -10,9 +10,10 @@ namespace Concert
         {
             Dictionary<string, List<string>> bandNames = new Dictionary<string, List<string>>();
             Dictionary<string, int> bandTimes = new Dictionary<string, int>();
+            
             string command = Console.ReadLine();
 
-            while(command != "start of concert")
+            while (command != "start of concert")
             {
                 List<string> token = command.Split("; ").ToList();
                 string bandName = token[1];
@@ -57,6 +58,7 @@ namespace Concert
             }
 
             string group = Console.ReadLine();
+            
             var sortedTimes = bandTimes.OrderBy(x => x.Key);
             int sum = 0;
 
