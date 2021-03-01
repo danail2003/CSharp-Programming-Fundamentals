@@ -7,13 +7,14 @@ namespace Cooking_Factory
         static void Main()
         {          
             string command = Console.ReadLine();
+            
             double highestQuality = 0;
             double maxValue = int.MinValue;
             int maxElements = int.MinValue;
             double maxAverage = int.MinValue;
             string[] numbers = new string[10];
 
-            while(command != "Bake It!")
+            while (command != "Bake It!")
             {
                 string[] convert = command.Split("#");
 
