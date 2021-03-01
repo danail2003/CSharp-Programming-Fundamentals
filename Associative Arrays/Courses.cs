@@ -7,6 +7,7 @@ public class Program
     public static void Main()
     {
         string command = Console.ReadLine();
+        
         Dictionary<string, List<string>> allStudents = new Dictionary<string, List<string>>();
 
         while (command != "end")
