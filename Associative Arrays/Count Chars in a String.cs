@@ -8,6 +8,7 @@ namespace Count_Chars_in_a_String
         static void Main()
         {
             string text = Console.ReadLine();
+            
             Dictionary<char, int> counts = new Dictionary<char, int>();
 
             for (int i = 0; i < text.Length; i++)
@@ -24,7 +25,7 @@ namespace Count_Chars_in_a_String
 
             foreach (var item in counts)
             {
-                if(item.Key != ' ')
+                if (item.Key != ' ')
                 {
                     Console.WriteLine($"{item.Key} -> {item.Value}");
                 }
