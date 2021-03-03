@@ -10,6 +10,7 @@ namespace Deciphering
         {
             string text = Console.ReadLine();
             string[] substrings = Console.ReadLine().Split();
+            
             Regex regex = new Regex(@"^[d-z|#{}]+$");
             StringBuilder decipher = new StringBuilder();
 
