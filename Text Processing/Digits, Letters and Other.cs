@@ -8,6 +8,7 @@ namespace Digits__Letters_and_Other
         static void Main()
         {
             string symbols = Console.ReadLine();
+            
             StringBuilder digits = new StringBuilder();
             StringBuilder letters = new StringBuilder();
             StringBuilder others = new StringBuilder();
