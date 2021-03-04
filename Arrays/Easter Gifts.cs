@@ -9,11 +9,11 @@ namespace Easter_Gifts
             string[] gifts = Console.ReadLine().Split();
             string command = Console.ReadLine();
 
-            while(command != "No Money")
+            while (command != "No Money")
             {
                 string[] token = command.Split();
 
-                if(token[0] == "OutOfStock")
+                if (token[0] == "OutOfStock")
                 {
                     for (int i = 0; i < gifts.Length; i++)
                     {
@@ -27,7 +27,7 @@ namespace Easter_Gifts
                 {
                     int index = int.Parse(token[2]);
 
-                    if(index >= 0 && index <= gifts.Length)
+                    if (index >= 0 && index <= gifts.Length)
                     {
                         for (int i = 0; i < gifts.Length; i++)
                         {
