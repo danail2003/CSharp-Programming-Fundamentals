@@ -10,6 +10,7 @@ namespace Emoji_Sumator
         {
             string text = Console.ReadLine();
             int[] numbers = Console.ReadLine().Split(":").Select(int.Parse).ToArray();
+            
             Regex regex = new Regex(@"(?<=[\s])(?<emoji>:[a-z]{4,}:)(?=[\s,.!?])");
 
             MatchCollection matches = regex.Matches(text);
