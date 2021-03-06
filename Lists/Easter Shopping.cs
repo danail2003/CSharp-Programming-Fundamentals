@@ -88,7 +88,7 @@ namespace Easter_Shopping
                 {
                     int index = int.Parse(command[2]);
 
-                    if(index >= 0 && index < shops.Count)
+                    if (index >= 0 && index < shops.Count)
                     {
                         for (int j = 0; j < shops.Count; j++)
                         {
