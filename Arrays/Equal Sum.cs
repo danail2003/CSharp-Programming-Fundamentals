@@ -8,6 +8,7 @@ namespace Equal_Sum
         static void Main()
         {
             int[] arr = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            
             int right = arr.Sum();
             int left = 0;
 
