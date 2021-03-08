@@ -8,6 +8,7 @@ namespace Even_and_Odd_Subtraction
         static void Main()
         {
             int[] numbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            
             int oddSum = 0;
             int evenSum = 0;
 
