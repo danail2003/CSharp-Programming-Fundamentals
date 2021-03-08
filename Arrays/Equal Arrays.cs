@@ -9,6 +9,7 @@ namespace Equal_Arrays
         {
             int[] firstNumbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
             int[] secondNumbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            
             int sum = 0;
 
             for (int i = 0; i < firstNumbers.Length; i++)
