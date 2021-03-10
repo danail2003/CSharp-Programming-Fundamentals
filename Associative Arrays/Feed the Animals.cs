@@ -12,7 +12,7 @@ namespace Feed_the_Animals
             Dictionary<string, int> area = new Dictionary<string, int>();
             string command = Console.ReadLine();
 
-            while(command != "Last Info")
+            while (command != "Last Info")
             {
                 string[] token = command.Split(":");
 
