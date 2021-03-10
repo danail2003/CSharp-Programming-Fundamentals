@@ -8,6 +8,7 @@ namespace Extract_File
         static void Main()
         {
             string[] directory = Console.ReadLine().Split("\\").ToArray();
+            
             string file = directory[directory.Length - 1];
             string[] split = file.Split(".");
             string fileName = split[0];
