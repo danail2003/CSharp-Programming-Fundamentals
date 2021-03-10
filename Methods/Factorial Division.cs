@@ -7,8 +7,10 @@ namespace Factorial_Division
         static void Main()
         {
             long factorialNumber = long.Parse(Console.ReadLine());
-            long divider = long.Parse(Console.ReadLine());          
+            long divider = long.Parse(Console.ReadLine());
+            
             double result = (double)DiviseNumbers(factorialNumber) / DiviseNumbers(divider);
+            
             Console.WriteLine($"{result:f2}");
         }
 
