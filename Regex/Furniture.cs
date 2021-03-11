@@ -9,6 +9,7 @@ namespace Furniture
         static void Main()
         {
             string command = Console.ReadLine();
+            
             string regex = @">>(?<furniture>[A-Z][a-z]+|[A-Z][A-Z])<<(?<price>[\d.]+)!(?<quantity>[\d]+)\b";
             double total = 0;
             List<string> furniture = new List<string>();
@@ -17,7 +18,7 @@ namespace Furniture
             {
                 Match match = Regex.Match(command, regex, RegexOptions.IgnoreCase);
 
-                if(match.Success)
+                if (match.Success)
                 {
                     var name = match.Groups["furniture"].Value;
                     var price = double.Parse(match.Groups["price"].Value);
