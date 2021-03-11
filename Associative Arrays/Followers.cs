@@ -11,11 +11,11 @@ namespace Followers
             Dictionary<string, List<int>> followers = new Dictionary<string, List<int>>();
             string command = Console.ReadLine();
 
-            while(command != "Log out")
+            while (command != "Log out")
             {
                 string[] token = command.Split(": ");
 
-                if(token[0] == "New follower")
+                if (token[0] == "New follower")
                 {
                     if (!followers.ContainsKey(token[1]))
                     {
