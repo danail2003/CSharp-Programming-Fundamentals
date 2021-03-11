@@ -11,7 +11,7 @@ namespace ForceBook
             Dictionary<string, List<string>> teams = new Dictionary<string, List<string>>();
             string command = Console.ReadLine();
 
-            while(command!= "Lumpawaroo")
+            while (command != "Lumpawaroo")
             {
                 if (command.Contains('|'))
                 {
@@ -32,7 +32,7 @@ namespace ForceBook
                         }
                     }
 
-                    if(!teams[token[0]].Contains(token[1]) && !isMember)
+                    if (!teams[token[0]].Contains(token[1]) && !isMember)
                     {
                         teams[token[0]].Add(token[1]);
                     }
