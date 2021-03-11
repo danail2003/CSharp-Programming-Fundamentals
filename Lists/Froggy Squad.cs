@@ -10,6 +10,7 @@ namespace Froggy_Squad
         {
             List<string> namesOfFrogs = Console.ReadLine().Split().ToList();
             string command = Console.ReadLine();
+            
             string[] token = command.Split();
 
             while (true)
