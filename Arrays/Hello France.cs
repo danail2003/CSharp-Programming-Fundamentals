@@ -9,6 +9,7 @@ namespace Hello__France
         {
             string[] items = Console.ReadLine().Split("|").ToArray();
             double budget = double.Parse(Console.ReadLine());
+            
             double diff = 0;
             double[] boughtItems = new double[items.Length];
 
@@ -16,27 +17,27 @@ namespace Hello__France
             {
                 string[] token = items[i].Split("->");
 
-                if(token[0] == "Clothes")
+                if (token[0] == "Clothes")
                 {
-                    if(double.Parse(token[1]) <= 50.00 && budget >= double.Parse(token[1]))
+                    if (double.Parse(token[1]) <= 50.00 && budget >= double.Parse(token[1]))
                     {
                         budget -= double.Parse(token[1]);
                         boughtItems[i] += double.Parse(token[1]) + (double.Parse(token[1]) * 0.40);
                         diff += (double.Parse(token[1]) * 0.40);
                     }
                 }
-                else if(token[0] == "Shoes")
+                else if (token[0] == "Shoes")
                 {
-                    if(double.Parse(token[1]) <= 35.00 && budget >= double.Parse(token[1]))
+                    if (double.Parse(token[1]) <= 35.00 && budget >= double.Parse(token[1]))
                     {
                         budget -= double.Parse(token[1]);
                         boughtItems[i] += double.Parse(token[1]) + (double.Parse(token[1]) * 0.40);
                         diff += (double.Parse(token[1]) * 0.40);
                     }
                 }
-                else if(token[0] == "Accessories")
+                else if (token[0] == "Accessories")
                 {
-                    if(double.Parse(token[1]) <= 20.50 && budget >= double.Parse(token[1]))
+                    if (double.Parse(token[1]) <= 20.50 && budget >= double.Parse(token[1]))
                     {
                         budget -= double.Parse(token[1]);
                         boughtItems[i] += double.Parse(token[1]) + (double.Parse(token[1]) * 0.40);
