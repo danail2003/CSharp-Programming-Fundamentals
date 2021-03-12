@@ -8,6 +8,7 @@ namespace House_Party
         static void Main()
         {
             int guests = int.Parse(Console.ReadLine());
+            
             List<string> goingOnParty = new List<string>();
 
             for (int i = 0; i < guests; i++)
@@ -18,7 +19,7 @@ namespace House_Party
 
                 for (int j = 0; j < goingOnParty.Count; j++)
                 {
-                    if (token[2]=="going!" && token[0] == goingOnParty[j])
+                    if (token[2] == "going!" && token[0] == goingOnParty[j])
                     {
                         Console.WriteLine($"{token[0]} is already in the list!");
                         goingCounter++;
@@ -26,7 +27,7 @@ namespace House_Party
                     }
                 }
 
-                if (goingCounter==0 && token[2] == "going!")
+                if (goingCounter == 0 && token[2] == "going!")
                 {
                     goingOnParty.Add(token[0]);                                      
                 }
