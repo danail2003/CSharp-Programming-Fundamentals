@@ -45,7 +45,7 @@ namespace Last_Stop
                     int firstNumber = int.Parse(token[1]);
                     int secondNumber = int.Parse(token[2]);
 
-                    if(numbers.Contains(firstNumber) && numbers.Contains(secondNumber))
+                    if (numbers.Contains(firstNumber) && numbers.Contains(secondNumber))
                     {
                         for (int i = 0; i < numbers.Count; i++)
                         {
