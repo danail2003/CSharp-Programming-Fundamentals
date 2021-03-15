@@ -10,6 +10,7 @@ namespace List_Manipulation_Advanced
         {
             List<int> numbers = Console.ReadLine().Split().Select(int.Parse).ToList();
             string command = Console.ReadLine();
+            
             int counter = 0;
 
             while (command != "end")
@@ -27,7 +28,7 @@ namespace List_Manipulation_Advanced
                         Console.WriteLine("No such number");
                     }                   
                 }
-                else if(token[0] == "PrintEven")
+                else if (token[0] == "PrintEven")
                 {
                     for (int i = 0; i < numbers.Count; i++)
                     {
