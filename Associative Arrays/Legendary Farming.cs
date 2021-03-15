@@ -10,6 +10,7 @@ namespace Legendary_Farming
         {           
             Dictionary<string, int> allItems = new Dictionary<string, int>();
             Dictionary<string, int> junks = new Dictionary<string, int>();
+            
             allItems["motes"] = 0;
             allItems["shards"] = 0;
             allItems["fragments"] = 0;
