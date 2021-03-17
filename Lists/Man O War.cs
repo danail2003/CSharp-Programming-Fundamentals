@@ -50,7 +50,7 @@ namespace Man_O_War
                     int endIndex = int.Parse(token[2]);
                     int damage = int.Parse(token[3]);
 
-                    if(startIndex < 0 == false && startIndex > statusOfPirates.Count == false && endIndex < 0 == false && endIndex > statusOfPirates.Count == false)
+                    if (startIndex < 0 == false && startIndex > statusOfPirates.Count == false && endIndex < 0 == false && endIndex > statusOfPirates.Count == false)
                     {
                         for (int i = startIndex; i <= endIndex; i++)
                         {
@@ -72,7 +72,7 @@ namespace Man_O_War
                     int index = int.Parse(token[1]);
                     int health = int.Parse(token[2]);
 
-                    if(index < 0 == false && index > statusOfPirates.Count == false)
+                    if (index < 0 == false && index > statusOfPirates.Count == false)
                     {
                         for (int i = 0; i < statusOfPirates.Count; i++)
                         {
