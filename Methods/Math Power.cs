@@ -8,7 +8,9 @@ namespace Math_Power
         {
             double number = double.Parse(Console.ReadLine());
             int powerNumber = int.Parse(Console.ReadLine());
+            
             double print = MathPower(number, powerNumber);
+            
             Console.WriteLine(print);
         }
 
