@@ -8,6 +8,7 @@ namespace Max_Sequence_of_Equal_Elements
         static void Main()
         {
             int[] arr = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            
             int counter = 1;
             int element = 0;
             int maxCount = 1;
