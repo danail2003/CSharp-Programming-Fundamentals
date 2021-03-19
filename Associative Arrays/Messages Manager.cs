@@ -29,7 +29,7 @@ namespace Messages_Manager
                 }
                 else if (token[0] == "Message")
                 {
-                    if(users.ContainsKey(token[1]) && users.ContainsKey(token[2]))
+                    if (users.ContainsKey(token[1]) && users.ContainsKey(token[2]))
                     {
                         users[token[1]][0] += 1;
                         users[token[2]][1] += 1;
