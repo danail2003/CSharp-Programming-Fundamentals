@@ -8,6 +8,7 @@ namespace Message_Decrypter
         static void Main()
         {
             int count = int.Parse(Console.ReadLine());
+            
             Regex regex = new Regex(@"^(\$|%)(?<word>[A-Z][a-z]{3,})\1: \[(?<first>\d*)]\|\[(?<second>\d*)]\|\[(?<third>\d*)]\|$");
 
             for (int i = 0; i < count; i++)
@@ -21,6 +22,7 @@ namespace Message_Decrypter
                     int firstSymbol = int.Parse(match.Groups["first"].Value);
                     int secondSymbol = int.Parse(match.Groups["second"].Value);
                     int thirdSymbol = int.Parse(match.Groups["third"].Value);
+                    
                     char first = (char)firstSymbol;
                     char second = (char)secondSymbol;
                     char third = (char)thirdSymbol;
