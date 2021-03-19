@@ -8,6 +8,7 @@ namespace Multiply_Evens_by_Odds
         {
             int number = Math.Abs(int.Parse(Console.ReadLine()));           
             int multiplyNumbers = GetMultipleOfEvenAndOdds(number);
+            
             Console.WriteLine(multiplyNumbers);
         }
 
