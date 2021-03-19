@@ -8,6 +8,7 @@ namespace Middle_Characters
         {
             string text = Console.ReadLine();
             string end = GetMiddle(text);
+            
             Console.WriteLine(end);
         }
 
