@@ -18,7 +18,7 @@ namespace Number_Array
                 {
                     int index = int.Parse(token[1]);
 
-                    if(index >= 0 && index <= numbers.Length)
+                    if (index >= 0 && index <= numbers.Length)
                     {
                         for (int i = 0; i < numbers.Length; i++)
                         {
@@ -34,7 +34,7 @@ namespace Number_Array
                     int index = int.Parse(token[1]);
                     int value = int.Parse(token[2]);
 
-                    if(index >= 0 && index <= 0)
+                    if (index >= 0 && index <= 0)
                     {
                         for (int i = 0; i < numbers.Length; i++)
                         {
