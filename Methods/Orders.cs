@@ -8,6 +8,7 @@ namespace Orders
         {
             string product = Console.ReadLine();
             int quantity = int.Parse(Console.ReadLine());
+            
             CalculatingOfProducts(product, quantity);            
         }
 
