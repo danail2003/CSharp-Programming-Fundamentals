@@ -7,11 +7,12 @@ namespace Password_Validator
         static void Main()
         {
             string pass = Console.ReadLine();
+            
             bool result1 = HasGotCharacters(pass);
             bool result2 = HasGotAllComponents(pass);
             bool result3 = HasTwoDigits(pass);
 
-            if(result1 && result2 && result3 == true)
+            if (result1 && result2 && result3 == true)
             {
                 Console.WriteLine("Password is valid");
             }
@@ -22,7 +23,7 @@ namespace Password_Validator
             int digits = pass.Length;
             bool isEnough = false;
 
-            if(digits >= 6 && digits <= 10)
+            if (digits >= 6 && digits <= 10)
             {
                 isEnough = true;
             }
