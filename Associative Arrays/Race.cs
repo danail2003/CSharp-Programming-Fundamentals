@@ -10,7 +10,9 @@ namespace Race
         {
             string[] participants = Console.ReadLine().Split(", ");
             string command = Console.ReadLine();
+            
             Dictionary<string, int> racers = new Dictionary<string, int>();
+            
             string name = "";
             int distance = 0;
             int counter = 0;
@@ -20,7 +22,7 @@ namespace Race
                 racers[participants[i]] = 0;
             }
 
-            while(command != "end of race")
+            while (command != "end of race")
             {
                 for (int i = 0; i < command.Length; i++)
                 {
