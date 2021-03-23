@@ -9,6 +9,7 @@ namespace Repeat_String
             string text = Console.ReadLine();
             int count = int.Parse(Console.ReadLine());
             string result = RepeatText(count, text);
+            
             Console.WriteLine(result);
         }
 
