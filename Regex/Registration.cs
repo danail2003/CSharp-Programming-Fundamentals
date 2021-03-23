@@ -9,6 +9,7 @@ namespace Registration
         {
             int lines = int.Parse(Console.ReadLine());
             Regex regex = new Regex(@"U\$(?<name>[A-Z][a-z]{2,})U\$P@\$(?<pass>[A-Za-z]{5,}\d+)P@\$");
+            
             int counter = 0;
 
             for (int i = 0; i < lines; i++)
