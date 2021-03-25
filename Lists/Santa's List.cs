@@ -11,7 +11,7 @@ namespace Santa_s_List
             List<string> kids = Console.ReadLine().Split("&").ToList();
             string command = Console.ReadLine();
 
-            while(command != "Finished!")
+            while (command != "Finished!")
             {
                 string[] token = command.Split();
 
@@ -48,7 +48,7 @@ namespace Santa_s_List
                         }
                     }
                 }
-                else if(token[0] == "Rearrange")
+                else if (token[0] == "Rearrange")
                 {
                     if (kids.Contains(token[1]))
                     {
