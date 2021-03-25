@@ -9,6 +9,7 @@ namespace Seize_the_Fire
         {
             string[] fireCells = Console.ReadLine().Split('#', StringSplitOptions.RemoveEmptyEntries).ToArray();
             int water = int.Parse(Console.ReadLine());
+            
             int[] fireOut = new int[fireCells.Length];
 
             for (int i = 0; i < fireCells.Length; i++)
@@ -19,7 +20,7 @@ namespace Seize_the_Fire
                 {
                     int level = int.Parse(token[2]);
 
-                    if(level < 81 == false && level > 125 == false)
+                    if (level < 81 == false && level > 125 == false)
                     {
                         if (water >= level)
                         {
@@ -45,7 +46,7 @@ namespace Seize_the_Fire
                 {
                     int level = int.Parse(token[2]);
 
-                    if(level < 1 == false && level > 50 == false)
+                    if (level < 1 == false && level > 50 == false)
                     {
                         if (water >= level)
                         {
@@ -60,7 +61,7 @@ namespace Seize_the_Fire
 
             for (int i = 0; i < fireOut.Length; i++)
             {
-                if(fireOut[i] == 0 == false)
+                if (fireOut[i] == 0 == false)
                 {
                     Console.WriteLine($" - {fireOut[i]}");
                 }
