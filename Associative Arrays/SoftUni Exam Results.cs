@@ -12,7 +12,7 @@ namespace SoftUni_Exam_Results
             Dictionary<string, int> submissions = new Dictionary<string, int>();
             string command = Console.ReadLine();
 
-            while(command != "exam finished")
+            while (command != "exam finished")
             {
                 string[] token = command.Split("-");
 
