@@ -11,7 +11,7 @@ namespace SoftUni_Course_Planning
             List<string> courses = Console.ReadLine().Split(", ").ToList();
             string command = Console.ReadLine();
 
-            while(command != "course start")
+            while (command != "course start")
             {
                 string[] token = command.Split(":");
 
@@ -40,7 +40,7 @@ namespace SoftUni_Course_Planning
                 }
                 else if (token[0] == "Swap")
                 {
-                    if(courses.Contains(token[1]) && courses.Contains(token[2]))
+                    if (courses.Contains(token[1]) && courses.Contains(token[2]))
                     {
                         for (int i = 0; i < courses.Count; i++)
                         {
