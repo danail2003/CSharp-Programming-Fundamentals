@@ -27,7 +27,7 @@ namespace Song_Encryption
                         {
                             encrypted.Append("@");
                         }
-                        else if(char.IsLetter(all[i]))
+                        else if (char.IsLetter(all[i]))
                         {
                             int symbol = all[i] + length;
 
