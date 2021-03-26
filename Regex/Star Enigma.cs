@@ -11,6 +11,7 @@ namespace Star_Enigma
         static void Main()
         {
             int count = int.Parse(Console.ReadLine());
+            
             int counter = 0;
             StringBuilder enigma = new StringBuilder();
             List<string> attacked = new List<string>();
@@ -22,7 +23,7 @@ namespace Star_Enigma
 
                 for (int j = 0; j < input.Length; j++)
                 {
-                    if(input[j] == 's' || input[j] == 't' || input[j] == 'a' || input[j] == 'r' || input[j] == 'S' || input[j] == 'A' || input[j] == 'T' || input[j] == 'R')
+                    if (input[j] == 's' || input[j] == 't' || input[j] == 'a' || input[j] == 'r' || input[j] == 'S' || input[j] == 'A' || input[j] == 'T' || input[j] == 'R')
                     {
                         counter++;
                     }
@@ -50,7 +51,7 @@ namespace Star_Enigma
                     {
                         attacked.Add(name);
                     }
-                    else if(group == "D")
+                    else if (group == "D")
                     {
                         destroyed.Add(name);
                     }
