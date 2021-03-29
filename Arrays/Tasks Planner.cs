@@ -21,7 +21,7 @@ namespace Tasks_Planner
                 {
                     int index = int.Parse(token[1]);
 
-                    if(index >= 0 && index <= numbers.Length)
+                    if (index >= 0 && index <= numbers.Length)
                     {
                         for (int i = 0; i < numbers.Length; i++)
                         {
@@ -37,7 +37,7 @@ namespace Tasks_Planner
                     int index = int.Parse(token[1]);
                     int time = int.Parse(token[2]);
 
-                    if(index >= 0 && index <= numbers.Length)
+                    if (index >= 0 && index <= numbers.Length)
                     {
                         for (int i = 0; i < numbers.Length; i++)
                         {
@@ -52,7 +52,7 @@ namespace Tasks_Planner
                 {
                     int index = int.Parse(token[1]);
 
-                    if(index >= 0 && index <= numbers.Length)
+                    if (index >= 0 && index <= numbers.Length)
                     {
                         for (int i = 0; i < numbers.Length; i++)
                         {
