@@ -15,7 +15,7 @@ namespace Treasure_Hunt
             {
                 string[] token = command.Split();
 
-                if(command == "Yohoho!")
+                if (command == "Yohoho!")
                 {
                     break;
                 }
@@ -34,7 +34,7 @@ namespace Treasure_Hunt
                 {
                     int index = int.Parse(token[1]);
 
-                    if(index < 0 == false && index > treasure.Count == false)
+                    if (index < 0 == false && index > treasure.Count == false)
                     {
                         string element = "";
 
@@ -81,7 +81,6 @@ namespace Treasure_Hunt
             {
                 string symbol = treasure[i];
                 allElements += symbol.Length;
-                
             }
 
             double diff = allElements / treasure.Count;
