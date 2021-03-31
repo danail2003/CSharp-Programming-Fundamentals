@@ -9,7 +9,7 @@ namespace Username
             string username = Console.ReadLine();
             string command = Console.ReadLine();
 
-            while(command != "Sign up")
+            while (command != "Sign up")
             {
                 string[] token = command.Split();
 
@@ -31,7 +31,7 @@ namespace Username
                     int startIndex = int.Parse(token[1]);
                     int endIndex = int.Parse(token[2]);
 
-                    if(startIndex >= 0 && startIndex < endIndex && endIndex < username.Length)
+                    if (startIndex >= 0 && startIndex < endIndex && endIndex < username.Length)
                     {
                         int diff = endIndex - startIndex + 1;
                         string substring = username.Substring(startIndex, diff);
