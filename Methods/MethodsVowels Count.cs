@@ -9,6 +9,7 @@ namespace Vowels_Count
             string text = Console.ReadLine().ToLower();
             int[] counter = new int[10];
             int result = CountingOfVowels(text, counter[0]);
+            
             Console.WriteLine(result);
         }
 
