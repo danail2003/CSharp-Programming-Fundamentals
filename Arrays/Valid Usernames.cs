@@ -14,11 +14,11 @@ namespace Valid_Usernames
                 string username = usernames[i];
                 bool isValid = false;
 
-                if(username.Length >= 3 && username.Length <= 16)
+                if (username.Length >= 3 && username.Length <= 16)
                 {
                     foreach (var symbol in username)
                     {
-                        if(char.IsLetterOrDigit(symbol) || symbol == 45 || symbol == 95)
+                        if (char.IsLetterOrDigit(symbol) || symbol == 45 || symbol == 95)
                         {
                             isValid = true;
                         }
