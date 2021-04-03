@@ -59,7 +59,7 @@ namespace Wizard_Poker
                     newCards[firstCard] = token[2];
                     newCards[secondCard] = token[1];
                 }
-                else if(token[0]== "Shuffle")
+                else if (token[0] == "Shuffle")
                 {
                     newCards.Reverse();
                 }
