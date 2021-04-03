@@ -20,7 +20,7 @@ namespace Weaponsmith
                     {
                         int index = int.Parse(token[2]);
 
-                        if(index > 0 && index <= text.Length)
+                        if (index > 0 && index <= text.Length)
                         {
                             for (int i = 0; i < text.Length; i++)
                             {
@@ -38,7 +38,7 @@ namespace Weaponsmith
                     {
                         int index = int.Parse(token[2]);
 
-                        if(index >= 0 && index < text.Length - 1)
+                        if (index >= 0 && index < text.Length - 1)
                         {
                             for (int i = 0; i < text.Length; i++)
                             {
